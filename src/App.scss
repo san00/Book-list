@@ -1,0 +1,13 @@
+@import 'src/index';
+
+.app_header{
+    display: flex;
+    flex-direction: column;
+    margin: $spacing-m;
+}
+
+.app_header-title{
+    display: flex;
+    justify-content: center;
+    color: $primary-text-colour;
+}

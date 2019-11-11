@@ -1,0 +1,43 @@
+.book {
+    display: flex;
+    justify-content: center;
+    margin-left: $spacing-l;
+    margin-right: $spacing-l;
+    flex-flow: wrap;
+}
+
+.book__container {
+    align-items: center;
+    background-color: #fefefe;
+    border-radius: 0.2em;
+    cursor: pointer;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin: $spacing-m;
+    padding: $spacing-m;
+}
+
+.book__title{
+font-size: $h3;
+}
+
+.book__title,
+.book__publisher,
+.book__button {
+    color: $primary-text-colour;
+    margin-bottom: $spacing-m;
+    text-align: center;
+}
+
+.book__image {
+    margin-bottom: $spacing-m;
+}
+
+.book__button {
+    color: $primary-text-colour;
+    cursor: pointer;
+}
+.book__button:hover {
+    background-color: $hover-colour;
+}
