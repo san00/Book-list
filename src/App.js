@@ -4,6 +4,17 @@ import SearchBooks from './components/SearchBooks';
 
 function App() {
   const [books, setBooks] = useState([]);
+  
+  function setData() {
+    localStorage.setItem('favourites', JSON.stringify(books));
+};
+
+function addFavourites(book){
+ const stored = JSON.parse(localStorage.getItem('favourites'))
+    const mergedBooks = [...books, book];
+    mergedBooks.push(books);
+    setData(stored);
+}
 
   const listOfBooks = books ? (
     books.map((book, index) => {
@@ -12,7 +23,7 @@ function App() {
         <h2 className="book__title">{book.volumeInfo.title}</h2>
         <p className="book__author">Author:{book.volumeInfo.authors}</p>
         <p className="book__publisher">Publisher:{book.volumeInfo.publisher}</p>
-        <button className="book__button">Add to favourites</button>
+        <button className="book__button" onClick={()=>addFavourites()}>Add to favourites</button>
       </article>
     })) : "Unfortunately an error has occurred, books are currently unavailable"
 
