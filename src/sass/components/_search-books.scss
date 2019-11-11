@@ -1,0 +1,27 @@
+.form {
+    color: $primary-text-colour;
+    display: flex;
+    justify-content: center;
+    margin-bottom: $spacing-l;
+    margin-left: $spacing-m;
+    margin-right: $spacing-m;
+}
+
+.form__label {
+    font-size: $body-text;
+    padding-right: $spacing-s;
+}
+
+.form__input {
+    font-size: $body-text;
+    padding: $spacing-s;
+}
+
+.form__input-submit:hover {
+    background-color: $hover-colour;
+}
+
+.form__input,
+.form__input-submit {
+    cursor: pointer;
+}

@@ -10,10 +10,10 @@ function SearchBooks(props) {
     }
     return (
         <section>
-            <form>
-                <label htmlFor="form">Search books</label>
-                <input type="text" placeholder="search books..." onChange={e => { setValue(e.target.value) }}></input>
-                <input type="submit" onClick={e => requestData(e)}></input>
+            <form className='form'>
+                <label className="form__label" htmlFor="form">Search books</label>
+                <input className="form__input-text" type="text" placeholder="search books..." onChange={e => { setValue(e.target.value) }}></input>
+                <input className="form__input-submit" type="submit" onClick={e => requestData(e)}></input>
             </form>
         </section>
     )
