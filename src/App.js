@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './App.scss';
-import SearchBooks from './components/SearchBooks';
+import SearchForm from './components/SearchForm';
 import ListOfBooks from './components/ListOfBooks';
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
       <header className="app_header">
         <h1 className="app_header-title">Books list</h1>
       </header>
-      <SearchBooks handleData={(results) => {
+      <SearchForm handleData={(results) => {
         setBooks(results);
       }} />
       <div className="book">
