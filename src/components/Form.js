@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 
-function SearchBooks(props) {
+function Form(props) {
     const [value, setValue] = useState();
     const requestData = async (e) => {
         e.preventDefault()
@@ -19,4 +19,4 @@ function SearchBooks(props) {
     )
 }
 
-export default SearchBooks
+export default Form
