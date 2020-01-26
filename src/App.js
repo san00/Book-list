@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.scss';
-import SearchForm from './components/SearchForm';
-import ListOfBooks from './components/ListOfBooks';
+import Form from './components/Form';
+import Book from './components/Book';
 
 function App() {
   const [books, setBooks] = useState([]);
@@ -11,12 +11,12 @@ function App() {
       <header className="app_header">
         <h1 className="app_header-title">Books list</h1>
       </header>
-      <SearchForm handleData={(results) => {
+      <Form handleData={(results) => {
         setBooks(results);
       }} />
       <div className="book">
         {books.map((book, index) => (
-          <ListOfBooks book={book} key={index} index={index} />
+          <Book book={book} key={index} index={index} />
         ))}
       </div>
     </main>

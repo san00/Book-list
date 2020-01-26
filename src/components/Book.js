@@ -1,18 +1,18 @@
 import React from 'react'
 
-function BookList({ book, index, books }) {
-    
-    function setData() {
+function Book({ book, index }) {
+
+    const setData = () => {
         localStorage.setItem('favourites', JSON.stringify(book));
     };
 
-    function addFavourites() {
+    const addFavourites = () => {
         const stored = JSON.parse(localStorage.getItem('favourites'))
         const favouriteBook = [];
         favouriteBook.push(book);
         setData(stored);
     }
-    
+
     return (
         <article className="book__container" key={index} index={index}>
             <img className="book__image" src={book.volumeInfo.imageLinks.thumbnail} alt="front cover of book"></img>
@@ -24,4 +24,4 @@ function BookList({ book, index, books }) {
     )
 }
 
-export default BookList
+export default Book
