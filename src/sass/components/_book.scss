@@ -1,8 +1,6 @@
 .book {
     display: flex;
-    justify-content: center;
-    margin-left: $spacing-l;
-    margin-right: $spacing-l;
+    justify-content: space-evenly;
     flex-flow: wrap;
 }
 
@@ -10,34 +8,53 @@
     align-items: center;
     background-color: #fefefe;
     border-radius: 0.2em;
+    box-shadow: 0 0.25em 0.5em 0 rgba(0,0,0,0.2);
     cursor: pointer;
     display: flex;
     flex: 1;
     flex-direction: column;
-    margin: $spacing-m;
+    margin: $spacing-l;
     padding: $spacing-m;
 }
 
-.book__title{
-font-size: $h3;
-}
-
-.book__title,
-.book__publisher,
-.book__button {
+.book__title {
     color: $primary-text-colour;
+    font-size: $h3;
     margin-bottom: $spacing-m;
     text-align: center;
 }
 
+
+.book__publisher,
+.book__author {
+    color: $primary-text-colour;
+    font-size: $body-text;
+    margin-bottom: $spacing-xs;
+    margin-left: $spacing-xs;
+    margin-right: $spacing-xs;
+    text-align: center;
+}
+
+.book__publisher {
+    margin-bottom: $spacing-m;
+}
+
 .book__image {
+    border-radius: 0.32em 0.32em 0 0;
     margin-bottom: $spacing-m;
 }
 
 .book__button {
     color: $primary-text-colour;
     cursor: pointer;
+    margin-left: $spacing-l;
+    margin-right: $spacing-l;
 }
+
 .book__button:hover {
     background-color: $hover-colour;
+}
+
+.book__container:hover {
+    box-shadow: 0 0.5em 1em 0 rgba(0,0,0,0.2);
 }
