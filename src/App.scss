@@ -3,11 +3,12 @@
 .app_header{
     display: flex;
     flex-direction: column;
-    margin: $spacing-m;
+    margin: $spacing-l;
 }
 
 .app_header-title{
     display: flex;
     justify-content: center;
     color: $primary-text-colour;
+    font-size: $h1;
 }
