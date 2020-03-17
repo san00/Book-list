@@ -11,9 +11,10 @@ function Form(props) {
     return (
         <section>
             <form className='form'>
-                <label className="form__label" htmlFor="form">Search books</label>
-                <input className="form__input-text" type="text" placeholder="search books..." onChange={e => { setValue(e.target.value) }}></input>
-                <input className="form__input-submit" type="submit" onClick={e => requestData(e)}></input>
+                <label className="form__label" htmlFor="searchbox">
+                <input className="form__searchbox" id="searchbox"  type="text" placeholder="Search for books..." onChange={e => { setValue(e.target.value) }}></input>
+                <input className="form__submit" type="submit" onClick={e => requestData(e)} value="Search"></input>
+                </label>
             </form>
         </section>
     )

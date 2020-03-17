@@ -7,21 +7,19 @@
     margin-right: $spacing-m;
 }
 
-.form__label {
-    font-size: $body-text;
-    padding-right: $spacing-s;
+.form__searchbox {
+    font-size: $body-small;
+    padding: $spacing-xs;
 }
-
-.form__input {
-    font-size: $body-text;
-    padding: $spacing-s;
+.form__submit{
+    padding: $spacing-xs;
+    margin-left: $spacing-xxs;
 }
-
-.form__input-submit:hover {
+.form__submit:hover {
     background-color: $hover-colour;
 }
 
-.form__input,
-.form__input-submit {
+.form__searchbox,
+.form__submit {
     cursor: pointer;
 }
