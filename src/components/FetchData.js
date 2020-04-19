@@ -6,7 +6,7 @@ import DisplayData from './DisplayData'
 
 function FetchData() {
     const [results, setResults] = useState([])
-    const [query, setQuery] = useState('cars')
+    const [query, setQuery] = useState('giraffe')
 
     const searchBooks = async () => {
         const response = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=${query}`)
