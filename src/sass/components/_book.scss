@@ -1,38 +1,44 @@
 .book {
     display: flex;
-    justify-content: space-evenly;
-    flex-flow: wrap;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: $spacing-s $spacing-xs;
+    @media(min-width:$breakpoint-desktop) {
+        flex-direction: row;
+        justify-content: space-around;
+        padding: $spacing-s;
+    }
 }
 
 .book__container {
-    align-items: center;
-    background-color: #fefefe;
     border-radius: 0.2em;
+    border: 1px solid rgba(0,0,0,0.125);
     box-shadow: 0 0.25em 0.5em 0 rgba(0,0,0,0.2);
     cursor: pointer;
     display: flex;
     flex: 1;
     flex-direction: column;
-    margin: $spacing-l;
+    margin: $spacing-m;
     padding: $spacing-m;
+    &:hover {
+        box-shadow: 0 0.5em 1em 0 rgba(0,0,0,0.2);
+    }
 }
 
 .book__title {
     color: $primary-text-colour;
-    font-size: $h3;
     margin-bottom: $spacing-m;
-    text-align: center;
+    text-align: left;
+    font-weight: 400;
 }
 
-
-.book__publisher,
-.book__author {
-    color: $primary-text-colour;
+.book__author,
+.book__publisher {
     font-size: $body-text;
-    margin-bottom: $spacing-xs;
-    margin-left: $spacing-xs;
-    margin-right: $spacing-xs;
-    text-align: center;
+    font-weight: 300;
+    margin: $spacing-xs;
+    text-align: left;
+    word-break: normal;
 }
 
 .book__publisher {
@@ -40,21 +46,8 @@
 }
 
 .book__image {
-    border-radius: 0.32em 0.32em 0 0;
+    border-bottom: 1px solid black;
     margin-bottom: $spacing-m;
+    object-fit: contain;
 }
 
-.book__button {
-    color: $primary-text-colour;
-    cursor: pointer;
-    margin-left: $spacing-l;
-    margin-right: $spacing-l;
-}
-
-.book__button:hover {
-    background-color: $hover-colour;
-}
-
-.book__container:hover {
-    box-shadow: 0 0.5em 1em 0 rgba(0,0,0,0.2);
-}

@@ -10,7 +10,10 @@ $spacing-xxl: calc(#{$base-space} * 8); // 128px spacing
 
 // project colours 
 $hover-colour: #6fc3f7;
-$primary-text-colour: #222831;
+$primary-text-colour:#222831;
+$secondary-text-colour:#0e4177;
+$button-colour: #dfe5e9;
+$button-hover-color: #b5cde8;
 
 // Media query
-$breakpoint-desktop: 45em;
+$breakpoint-desktop: 30em;
