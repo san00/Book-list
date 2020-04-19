@@ -11,7 +11,7 @@ function SearchData({ handleChange, handleSubmit }) {
                         placeholder='Search books'
                         onChange={handleChange}
                     ></input>
-                    <input className='form__submit' type='submit'></input>
+                    <input className='form__submit button' type='submit'></input>
                 </label>
             </form>
         </section>

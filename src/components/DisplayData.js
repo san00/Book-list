@@ -8,12 +8,12 @@ function DisplayData({ results }) {
             <DisplayItem
                 book={book}
                 key={book.id}
-                index={index} className='book' />
+                index={index} />
         )
     })) : <h2>'Unable to load books'</h2>
 
     return (
-        <section>
+        <section className='book' >
             {displayResults}
         </section>
     )

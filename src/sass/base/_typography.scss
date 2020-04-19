@@ -12,6 +12,7 @@ $h2: calc(#{$h3} * #{$text-scale});
 $h1: calc(#{$h2} * #{$text-scale});
 
 body {
+    font-family: "Raleway", sans-serif;
     font-size: $text-base;
     line-height: 1.44em;
 }
