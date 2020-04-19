@@ -2,7 +2,7 @@
     color: $primary-text-colour;
     display: flex;
     justify-content: center;
-    margin-bottom: $spacing-l;
+    margin-bottom: $spacing-xl;
     margin-left: $spacing-m;
     margin-right: $spacing-m;
 }
@@ -11,12 +11,14 @@
     font-size: $body-small;
     padding: $spacing-xs;
 }
-.form__submit{
+
+.form__submit {
+    margin-left: $spacing-s;
     padding: $spacing-xs;
-    margin-left: $spacing-xxs;
 }
+
 .form__submit:hover {
-    background-color: $hover-colour;
+    background-color: $button-hover-color;
 }
 
 .form__searchbox,
