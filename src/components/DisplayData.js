@@ -2,7 +2,7 @@ import React from 'react'
 
 import DisplayItem from './DisplayItem'
 
-function DisplayData({ results }) {
+function DisplayData({ results, error }) {
     const displayResults = results ? (results.map((book, index) => {
         return (
             <DisplayItem
@@ -15,6 +15,7 @@ function DisplayData({ results }) {
     return (
         <section className='book' >
             {displayResults}
+            {error && <h2>{error.message}! Unable to load books</h2>}
         </section>
     )
 }
