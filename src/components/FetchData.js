@@ -7,10 +7,16 @@ import DisplayData from './DisplayData'
 function FetchData() {
     const [results, setResults] = useState([])
     const [query, setQuery] = useState('giraffe')
+    const [error, setError] = useState(null)
 
     const searchBooks = async () => {
-        const response = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=${query}`)
-        setResults(response.data.items);
+        try {
+            const response = await axios.get(`https://www.googleapis.com/books/v1/volumes?q=${query}`)
+            setResults(response.data.items);
+        }
+        catch (error) {
+            setError(error)
+        }
     }
 
     useEffect(() => {
@@ -29,7 +35,7 @@ function FetchData() {
     return (
         <section>
             <SearchData handleSubmit={handleSubmit} handleChange={handleChange} />
-            <DisplayData results={results} />
+            <DisplayData results={results} error={error} />
         </section>
     )
 }
