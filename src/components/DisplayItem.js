@@ -13,7 +13,7 @@ function DisplayItem({ book, index }) {
         setData(stored);
     }
 
-    return (book.volumeInfo.hasOwnProperty('imageLinks') === false ? (<p>Book currently unavailable</p>) :
+    return (book.volumeInfo.hasOwnProperty('imageLinks') === false ? (<p className="book__error">Book unavailable</p>) :
         <article className='book__container' key={index} index={index}>
             <img className="book__image" src={book.volumeInfo.imageLinks.thumbnail} alt='front cover of book'></img>
             <p className='book__title'><b>{book.volumeInfo.title ? book.volumeInfo.title : 'Unavailable'}</b></p>
