@@ -25,11 +25,17 @@
     }
 }
 
+.book__image {
+    border-bottom: 0.1em solid black;
+    margin-bottom: $spacing-m;
+    object-fit: contain;
+}
+
 .book__title {
     color: $primary-text-colour;
+    font-weight: 400;
     margin-bottom: $spacing-m;
     text-align: left;
-    font-weight: 400;
 }
 
 .book__author,
@@ -45,9 +51,9 @@
     margin-bottom: $spacing-m;
 }
 
-.book__image {
-    border-bottom: 1px solid black;
-    margin-bottom: $spacing-m;
-    object-fit: contain;
+.book__error {
+    border-bottom: 0.1em solid black;
+    color: red;
+    text-align: center;
+    font-weight: 300
 }
-

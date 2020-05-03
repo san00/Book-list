@@ -10,12 +10,12 @@ function DisplayData({ results, error }) {
                 key={book.id}
                 index={index} />
         )
-    })) : <h2>'Unable to load books'</h2>
+    })) : <h2 className="book__error">'Unable to load books'</h2>
 
     return (
         <section className='book' >
             {displayResults}
-            {error && <h2>{error.message}! Unable to load books</h2>}
+            {error && <h2>{error.message}</h2>}
         </section>
     )
 }
