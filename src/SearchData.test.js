@@ -24,3 +24,19 @@ test('SearchData renders without error', () => {
     const component = findByTestAttr(wrapper, 'component-searchData')
     expect(component.length).toBe(1)
 })
+
+describe('Capture changes to form input', () => {
+    test('State updates with the value of search box on change', () => {
+        const mockOnChange = jest.fn()
+        const mockHandleSubmit =jest.fn()
+
+        const wrapper = setup({handleChange:mockOnChange, handleSubmit:mockHandleSubmit})
+        const searchInput = findByTestAttr(wrapper, 'component-searchData-input')
+
+        const mockEvent = {target: { value: 'cars' } }
+        searchInput.simulate('change', mockEvent)
+
+        expect(mockOnChange).toHaveBeenCalledWith(mockEvent)
+    })
+ 
+})
