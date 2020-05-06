@@ -3,7 +3,7 @@ import React from 'react'
 function SearchData({ handleChange, handleSubmit }) {
 
     return (
-        <section>
+        <section data-test='component-searchData'>
             <form className='form' onSubmit={handleSubmit}>
                 <label className='form__label' htmlFor='searchbox'>
                     <input className='form__searchbox'
