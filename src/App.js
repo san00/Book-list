@@ -5,7 +5,7 @@ import Header from './components/Header'
 
 function App() {
   return (
-    <main >
+    <main data-test='component-app'>
       <Header />
       <FetchData />
     </main >
