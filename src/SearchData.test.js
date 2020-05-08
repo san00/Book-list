@@ -8,10 +8,7 @@ import SearchData from './components/SearchData'
 Enzyme.configure({ adapter: new EnzymeAdapter() })
 
 /**
- * Factory function to create a shallow wrapper for the SearchData component
- * @function setup
- * @param {object} props - Component props specific to this setup
- * @param {any} state - Initial state for setup.
+ * Setup function for SearchData component
  * @returns {ShallowWrapper}
  */
 
@@ -23,4 +20,20 @@ test('SearchData renders without error', () => {
     const wrapper = setup()
     const component = findByTestAttr(wrapper, 'component-searchData')
     expect(component.length).toBe(1)
+})
+
+describe('Capture events entered into form', () => {
+    test('State updates with the value of search box on change', () => {
+        const mockOnChange = jest.fn()
+        const mockHandleSubmit =jest.fn()
+
+        const wrapper = setup({handleChange:mockOnChange, handleSubmit:mockHandleSubmit})
+        const searchInput = findByTestAttr(wrapper, 'component-searchData-input')
+
+        const mockEvent = {target: { value: 'cars' } }
+        searchInput.simulate('change', mockEvent)
+
+        expect(mockOnChange).toHaveBeenCalledWith(mockEvent)
+    })
+ 
 })
