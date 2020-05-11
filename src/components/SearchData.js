@@ -3,10 +3,10 @@ import React from 'react'
 function SearchData({ handleChange, handleSubmit }) {
 
     return (
-        <section>
-            <form className='form' onSubmit={handleSubmit}>
+        <section data-test='component-searchData'>
+            <form data-test='form-submit' className='form' onSubmit={handleSubmit}>
                 <label className='form__label' htmlFor='searchbox'>
-                    <input className='form__searchbox'
+                    <input data-test='component-searchData-input' className='form__searchbox'
                         id='searchbox' type='text'
                         placeholder='Search books'
                         onChange={handleChange}

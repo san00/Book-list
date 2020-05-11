@@ -33,7 +33,7 @@ function FetchData() {
     }
 
     return (
-        <section>
+        <section data-test='component-FetchData'>
             <SearchData handleSubmit={handleSubmit} handleChange={handleChange} />
             <DisplayData results={results} error={error} />
         </section>
