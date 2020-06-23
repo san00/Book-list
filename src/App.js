@@ -1,14 +1,17 @@
-import React from 'react'
+import React from "react";
 
-import FetchData from './components/FetchData'
-import Header from './components/Header'
+import FetchData from "./components/FetchData";
+import Header from "./components/Header";
+import AppContextProvider from "./components/AppContext";
 
 function App() {
   return (
-    <main data-test='component-app'>
-      <Header />
-      <FetchData />
-    </main >
+    <AppContextProvider>
+      <main data-test="component-app">
+        <Header />
+        <FetchData />
+      </main>
+    </AppContextProvider>
   );
 }
 
