@@ -34,7 +34,9 @@ function DisplayItem({ book, index }) {
       >
         Add to favourites
       </button>
-      {context.favourites[book.id] && "book added"}
+      {context.favourites[book.id] && (
+        <p className="book__text-saved">"item saved"</p>
+      )}
     </article>
   );
 }
