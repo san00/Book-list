@@ -1,59 +1,67 @@
 .book {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    padding: $spacing-s $spacing-xs;
-    @media(min-width:$breakpoint-desktop) {
-        flex-direction: row;
-        justify-content: space-around;
-        padding: $spacing-s;
-    }
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: $spacing-s $spacing-xs;
+  @media (min-width: $breakpoint-desktop) {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: $spacing-s;
+  }
 }
 
 .book__container {
-    border-radius: 0.2em;
-    border: 1px solid rgba(0,0,0,0.125);
-    box-shadow: 0 0.25em 0.5em 0 rgba(0,0,0,0.2);
-    cursor: pointer;
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    margin: $spacing-m;
-    padding: $spacing-m;
-    &:hover {
-        box-shadow: 0 0.5em 1em 0 rgba(0,0,0,0.2);
-    }
+  border-radius: 0.2em;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin: $spacing-m;
+  padding: $spacing-m;
+  &:hover {
+    box-shadow: 0 0.5em 1em 0 rgba(0, 0, 0, 0.2);
+  }
 }
 
 .book__image {
-    border-bottom: 0.1em solid black;
-    margin-bottom: $spacing-m;
-    object-fit: contain;
+  border-bottom: 0.1em solid black;
+  margin-bottom: $spacing-m;
+  object-fit: contain;
 }
 
 .book__title {
-    color: $primary-text-colour;
-    font-weight: 400;
-    margin-bottom: $spacing-m;
-    text-align: left;
+  color: $primary-text-colour;
+  font-weight: 400;
+  margin-bottom: $spacing-m;
+  text-align: left;
 }
 
 .book__author,
 .book__publisher {
-    font-size: $body-text;
-    font-weight: 300;
-    margin: $spacing-xs;
-    text-align: left;
-    word-break: normal;
+  font-size: $body-text;
+  font-weight: 300;
+  margin: $spacing-xs;
+  text-align: left;
+  word-break: normal;
 }
 
 .book__publisher {
-    margin-bottom: $spacing-m;
+  margin-bottom: $spacing-m;
 }
 
 .book__error {
-    border-bottom: 0.1em solid black;
-    color: red;
-    text-align: center;
-    font-weight: 300
+  border-bottom: 0.1em solid black;
+  color: red;
+  text-align: center;
+  font-weight: 300;
+}
+
+.book__text-saved {
+  font-size: $body-text;
+  font-weight: 700;
+  font-style: italic;
+  margin: $spacing-m;
+  text-align: center;
 }
